@@ -5,13 +5,13 @@ SSHID is a small Laravel and Inertia application for publishing and installing S
 Instead of copying public keys manually between machines, a user can save their public SSH keys once in SSHID and then install them on a server with a short command:
 
 ```bash
-curl -sS https://sshid.io/username | bash
+curl -sS https://ssh.hsp.ovh/username | bash
 ```
 
 For example:
 
 ```bash
-curl -sS https://sshid.io/ghostcompiler | bash
+curl -sS https://ssh.hsp.ovh/ghostcompiler | bash
 ```
 
 The public browser page at the same URL shows a polished command page with copy buttons. Command-line clients receive an installer script.
@@ -48,7 +48,7 @@ SSHID only stores public keys. It should never receive or store private keys.
 For a browser request:
 
 ```text
-https://sshid.io/ghostcompiler
+https://ssh.hsp.ovh/ghostcompiler
 ```
 
 SSHID shows a public page with commands and copy buttons.
@@ -56,13 +56,13 @@ SSHID shows a public page with commands and copy buttons.
 For a command-line request:
 
 ```bash
-curl -sS https://sshid.io/ghostcompiler | bash
+curl -sS https://ssh.hsp.ovh/ghostcompiler | bash
 ```
 
 SSHID returns a bash installer script. The script fetches:
 
 ```text
-https://sshid.io/ghostcompiler.keys
+https://ssh.hsp.ovh/ghostcompiler.keys
 ```
 
 Then it appends missing valid public keys to:
